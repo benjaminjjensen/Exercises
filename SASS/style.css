@@ -1,0 +1,48 @@
+h1 {
+  font-family: helvetica, arial, sans-serif;
+  font-weight: 700;
+  color: darkred; }
+
+p {
+  font-family: helvetica, arial, sans-serif;
+  color: darkred; }
+
+button {
+  width: 120px;
+  padding: 10px;
+  background-color: darkred;
+  color: #ffffff;
+  border: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer; }
+
+button:hover {
+  background-color: #a50000; }
+
+.menu {
+  list-style: none; }
+  .menu li {
+    display: inline; }
+    .menu li a {
+      font-family: helvetica, arial, sans-serif;
+      text-decoration: none;
+      color: darkred; }
+      .menu li a:hover {
+        text-decoration: underline; }
+
+.min-kasse, .alt-kasse {
+  width: 300px;
+  height: 200px;
+  background-color: #dddddd;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px; }
+
+.alt-kasse {
+  border: 1px solid #333333;
+  width: 400px; }
+
+/*# sourceMappingURL=style.css.map */

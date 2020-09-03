@@ -1,0 +1,58 @@
+$brand-color: darkred; // variable
+$brand-font: helvetica, arial, sans-serif;
+$my-width: 300px;
+
+//mixin
+@mixin rounded-corners ($radius: 4px) { //default værdi
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+h1 {
+    font-family: $brand-font;
+    font-weight: 700;
+    color: $brand-color;
+}
+p {
+    font-family: $brand-font;
+    color: darkred;
+}
+button {
+    width: 120px;
+    padding: 10px;
+    background-color: $brand-color;
+    color: #ffffff;
+    border: none;
+    @include rounded-corners; //her bruger vi en mixin, som vi har keldt rounded-corners
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+background-color: lighten($brand-color, 5%); //lighten er en SASS function
+}
+.menu { //nested styles
+    list-style: none;
+    li{
+     display: inline; 
+    a {
+      font-family: $brand-font;
+      text-decoration: none;
+      color: $brand-color;
+      &:hover {
+          text-decoration: underline;
+      }
+    }  
+  }
+
+}
+.min-kasse {
+    width: $my-width;
+    height: 200px;
+    background-color: #dddddd;
+    @include rounded-corners(15px); //her bruger vi vores mixin, men vi ændrer værdien af varibalen
+}
+.alt-kasse { //med @extend kan jeg genbruge det, der står i en anden selector
+    @extend .min-kasse;
+    border: 1px solid #333333;
+    width: ($my-width + 100px); //operator
+}
